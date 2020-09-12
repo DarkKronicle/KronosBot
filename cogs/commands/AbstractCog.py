@@ -1,6 +1,11 @@
 from abc import ABC, abstractmethod, ABCMeta
 from discord.ext import commands
 
+"""
+This is a class designed to make my life easier in creating commands.
+It starts by creating a parent metaclass CommandMeta so we don't get any type errors.
+After that we create AbstractCommand that takes in a couple variables and then form it into CommandCog.
+"""
 
 class CommandMeta(commands.CogMeta, ABCMeta):
     pass

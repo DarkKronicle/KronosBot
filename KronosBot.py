@@ -6,12 +6,13 @@ import discord
 from discord.ext.commands import Bot
 
 
-commands_dir = "cogs.commands"
+# Can manage the different Cogs easier this way. All of these below will extend CommandCog
 commands = [Ping()]
 
 bot = Bot(command_prefix="!")
-config = Config("config.json")
 
+# If you're using this, exampleconfig.json has the same values just with placeholders.
+config = Config("config.json")
 token = config.getvalue("token")
 
 

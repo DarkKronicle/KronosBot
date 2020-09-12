@@ -1,6 +1,7 @@
 import json
 
 
+# Simple JSON read class. Used for the bot token.
 class Config:
     file = None
     f = None

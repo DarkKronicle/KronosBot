@@ -1,5 +1,7 @@
-from cogs.commands.AbstractCommandCog import CommandCog
+from cogs.commands.AbstractCog import CommandCog
 from discord.ext import commands
+
+# Base command to test the bot! Uses the fancy AbstractCog.
 
 
 class Ping(CommandCog):
@@ -11,10 +13,6 @@ class Ping(CommandCog):
     def __init__(self):
         super().__init__()
 
-    @commands.command(name=name)
+    @commands.command(name=name, aliases=aliases)
     async def ping(self, ctx: commands.Context):
         await ctx.send("Pong!")
-
-
-def setup(bot):
-    bot.add_cog(Ping())
